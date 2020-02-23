@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">theproject_1</string>
+    <string name="numbers">Числа</string>
+    <string name="сolor">Цвета</string>
+    <string name="words">Слова</string>
+    <string name="arif">Арифметика</string>
+</resources>
