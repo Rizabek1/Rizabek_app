@@ -2,112 +2,67 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/Project" />
-
+        android:src="@drawable/damumain"
+        android:scaleType="fitXY"/>
     <LinearLayout
         android:id="@+id/container1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="left"
+        android:gravity="start"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/ImageViewNums"
+            android:layout_width="302dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="268dp" />
+    </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/container2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp">
+    <LinearLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical">
 
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-                </ScrollView>
+        <ImageView
+            android:id="@+id/ImageViewWords"
+            android:layout_width="302dp"
+            android:layout_height="85dp"
+            android:layout_marginLeft="10dp"
 
-                <LinearLayout
-                    android:id="@+id/container3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:id="@+id/line1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView1"
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="65dp"
-                            android:background="@drawable/button_blue_press"
-                            android:gravity="center"
-                            android:text="@string/numbers"
-                            android:textColor="@color/colorBlue"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="12dp"
-                            android:background="@drawable/button_red_pressed"
-                            android:gravity="center"
-                            android:text="@string/words"
-                            android:textColor="@color/colorRed"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView3"
-
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="12dp"
-                            android:background="@drawable/button_yellow_pressed"
-                            android:gravity="center"
-                            android:text="@string/сolor"
-                            android:textColor="@color/colorYellow"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textView4"
-
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="12dp"
-                            android:background="@drawable/button_purple_press"
-                            android:gravity="center"
-                            android:text="@string/arif"
-                            android:textColor="@color/colorPurple"
-                            android:textSize="30dp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
+            android:layout_marginTop="370dp"
+            />
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ImageViewColors"
+            android:layout_width="302dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="490dp"
+
+            android:layout_marginStart="13dp" />
+    </LinearLayout>
+
+
 
 </RelativeLayout>

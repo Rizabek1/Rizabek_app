@@ -2,15 +2,75 @@ package com.test.theproject_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private long backPressedTime;
+    private Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView textViewStart = (TextView)findViewById(R.id.textViewStart)
+
+        ImageView ImageViewNums = (ImageView)findViewById(R.id.ImageViewNums);
+        ImageViewNums.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent( MainActivity.this, One.class);
+                    startActivity(intent);finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+
+        ImageView ImageViewWords = (ImageView)findViewById(R.id.ImageViewWords);
+        ImageViewWords.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent( MainActivity.this, Words.class);
+                    startActivity(intent);finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        ImageView ImageViewColors = (ImageView)findViewById(R.id.ImageViewColors);
+        ImageViewColors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent( MainActivity.this, Colors.class);
+                    startActivity(intent);finish();
+                }catch (Exception e){
+
+                }
+            }
+        });
+        Window w = getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(backPressedTime + 2000>System.currentTimeMillis()){
+            backToast.cancel();
+             super.onBackPressed();
+             return;
+        }
+        else{
+           backToast = Toast.makeText(getBaseContext(),"Нажмите на кпопку еще раз, чтобы выйти", Toast.LENGTH_SHORT);
+           backToast.show();
+        }
     }
 }
